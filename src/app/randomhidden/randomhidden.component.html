@@ -1,0 +1,17 @@
+<div *ngFor="let character of characters">
+  <input type="text" [(ngModel)]="character.name">
+  <button (click)="changeCounter(character, character.counter - 1)"><</button>
+  <span>{{character.counter}}</span>
+  <button (click)="changeCounter(character, character.counter + 1)">></button>
+</div>
+
+
+
+<input placeholder="new name" type="text" [(ngModel)]="newValue">
+<button (click)="addNew()">New</button>
+
+<button (click)="start()">Start</button>
+
+<h2>{{showingCharacterName}}</h2>
+
+<button (click)="nextCharacterName()">Next Character</button>
